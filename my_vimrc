@@ -99,7 +99,11 @@ let s:packages = [
             \ "github.com/kisielk/errcheck",  
             \ "github.com/jstemmer/gotags",  
             \ ]
-"tagbar 
+" 跳转到定义
+nmap <c-p> :GoDef<CR>
+"函数被调用的位置
+nmap <c-l> :GoImplements<CR>
+" 打开tagbar 
 nmap <F8> :TagbarToggle<CR> 
 
 
