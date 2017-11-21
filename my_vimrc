@@ -156,6 +156,7 @@ autocmd InsertEnter * se cul " 用浅色高亮当前行
 set cursorline " 突出显示当前行
 set magic " 设置魔术
 set ruler " 显示标尺
+set mouse=a 
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
