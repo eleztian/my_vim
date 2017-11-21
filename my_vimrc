@@ -107,8 +107,12 @@ let s:packages = [
 nmap <c-p> :GoDef<CR>
 "函数被调用的位置
 nmap <c-l> :GoImplements<CR>
+" 自动导入包
+nmap <c-i> :GoImports<CR>
 " 打开tagbar 
 nmap <F8> :TagbarToggle<CR> 
+autocmd BufWritePre *.go :GoImports 
+
 " ----------------------------------------------------------------
 
 " Tagbar 
@@ -237,6 +241,11 @@ function! ClosePair(char)
     endif
 endfunction
 filetype plugin indent on
+
+" 自定义通用快捷键
+" <c+s> 保存
+nmap <c-s> :w<CR>
+
 
 """""新文件标题""""""""""
 "新建.c,.h,.sh,.java文件，自动插入文件头
