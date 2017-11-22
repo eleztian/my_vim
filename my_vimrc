@@ -110,9 +110,13 @@ nmap <c-l> :GoImplements<CR>
 " 自动导入包
 nmap <c-i> :GoImports<CR>
 " 打开tagbar 
-nmap <F8> :TagbarToggle<CR> 
-autocmd BufWritePre *.go :GoImports 
-
+nmap <F8> :TagbarToggle<CR>
+let g:go_fmt_command = "goimports"
+""//autocmd BufWritePre *.go :GoFmt
+augroup f5 
+	autocmd FileType go nmap <F5> :w <CR>
+	autocmd FileType go nmap <F5> :!go run % <CR>
+augroup end  
 " ----------------------------------------------------------------
 
 " Tagbar 
